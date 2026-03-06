@@ -8,6 +8,7 @@ import { LoginComponent } from './features/login-component/login-component';
 import { FatherComponent } from './features/father-component/father-component';
 import { ChildComponent } from './features/child-component/child-component';
 import { SignalExampleComponent } from './features/signal-example-component/signal-example-component';
+import { SignalFormComponent } from './features/signal-form-component/signal-form-component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { SignalExampleComponent } from './features/signal-example-component/sign
             LoginComponent,
             FatherComponent,
             ChildComponent,
-            SignalExampleComponent],
+            SignalExampleComponent,
+            SignalFormComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
