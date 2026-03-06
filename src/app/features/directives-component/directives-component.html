@@ -1,0 +1,52 @@
+<h1>Directives</h1>
+
+<button (click)="isVisible = !isVisible">Toggle</button>
+@if(isVisible)
+{
+  <p higligthDir>Questo testo appare e scompare con un click</p>
+}
+
+<button (click)="toggleList()">
+  {{showList == true ? 'Hide': 'Show'}}
+</button>
+
+<select [(ngModel)]="favoriteFrameworks">
+  @for(e of frameworks; track e; let i = $index)
+  {
+    <option [value]="e">{{i}} -- {{e}}</option>
+  }
+</select>
+
+@if(showList)
+{
+  <ul>
+    @for(element of frameworks; track element; let i = $index)
+    {
+      <li
+        [ngClass]="{'highlight': element === favoriteFrameworks}"
+        [ngStyle]="{
+          'font-weight': (i % 2 === 0 && element !== favoriteFrameworks) ? 'bold' : 'normal',
+          'background-color': element !== favoriteFrameworks ? 'blue': ''
+          }"
+      >
+        {{i}} -- {{element}}
+      </li>
+    }
+  </ul>
+}
+
+@switch (favoriteFrameworks)
+{
+  @case('Angular'){
+    <p>Hai Scelto Angular!</p>
+  }
+  @case('React'){
+    <p>Hai Scelto React!</p>
+  }
+  @case('Vue'){
+    <p>Hai Scelto Vue!</p>
+  }
+  @default {
+    <p>Seleziona un Framework</p>
+  }
+}

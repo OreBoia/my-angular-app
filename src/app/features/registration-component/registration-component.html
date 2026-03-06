@@ -1,0 +1,17 @@
+<h1>Registration Form</h1>
+
+<form #regForm="ngForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Name:</label>
+    <input name="name" [(ngModel)]="utente.name" required/>
+  </div>
+  <div>
+    <label>Email:</label>
+    <input name="email" [(ngModel)]="utente.email" required email/>
+  </div>
+  <button type="submit" [disabled]="regForm.invalid">Invia</button>
+</form>
+
+@if(submitted){
+  <p>Dati inviati: {{utente.name}} -- {{utente.email}}</p>
+}

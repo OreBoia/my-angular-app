@@ -2,12 +2,24 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { BaseComponent } from './features/base-component/base-component';
 import { BindingComponent } from './features/binding-component/binding-component';
+import { DirectivesComponent } from './features/directives-component/directives-component';
+import { RegistrationComponent } from './features/registration-component/registration-component';
+import { LoginComponent } from './features/login-component/login-component';
+import { FatherComponent } from './features/father-component/father-component';
+import { ChildComponent } from './features/child-component/child-component';
+import { SignalExampleComponent } from './features/signal-example-component/signal-example-component';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet,
             BaseComponent,
-            BindingComponent],
+            BindingComponent,
+            DirectivesComponent,
+            RegistrationComponent,
+            LoginComponent,
+            FatherComponent,
+            ChildComponent,
+            SignalExampleComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
