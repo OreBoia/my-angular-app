@@ -18,6 +18,7 @@ interface ContactData{
 })
 export class SignalFormComponent
 {
+  
   contactModel = signal<ContactData>({
     name: '',
     email: '',

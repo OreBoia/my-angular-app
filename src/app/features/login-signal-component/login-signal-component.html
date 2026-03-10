@@ -1,0 +1,20 @@
+<h1>LOGIN</h1>
+
+<form (ngSubmit)="onLogin($event)">
+  <div>
+    <label>Username: </label>
+    <input [formField]="loginAuthForm.username"/>
+  </div>
+  <div>
+    <label>Password:</label>
+    <input [formField]="loginAuthForm.password"/>
+  </div>
+  <div>
+    <label>Role:</label>
+    <input [formField]="loginAuthForm.role"/>
+  </div>
+  <button type="submit">Login</button>
+</form>
+
+<p>{{authService.isLoggedIn()}}</p>
+<p>{{authService.getRole()}}</p>

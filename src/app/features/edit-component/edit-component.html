@@ -1,0 +1,9 @@
+<h2>Edit</h2>
+<p>Guard CanActivate</p>
+
+<input type="text" [value]="currentValue()" (input)="onInput($event)" placeholder="scrivi una modifica"/>
+
+<button type="button" (click)="save()">Save</button>
+
+<p>Valore corrente: {{currentValue()}}</p>
+<p>Valore salvato: {{savedValue()}}</p>
