@@ -1,2 +1,4 @@
 <h1>FATHER COMPONENT</h1>
-<app-child-component [childCounter]="fatherCounter" (counterEvent)="onCounterChanged($event)"></app-child-component>
+<!-- <app-child-component [childCounter]="fatherCounter" (counterEvent)="onCounterChanged($event)"></app-child-component> -->
+<h3>Contatore Signal (padre): {{fatherCounterSignal()}}</h3>
+<app-child-component [childCounterSignal]="fatherCounterSignal()" (childChangeSignal)="onCounterSignalChanged($event)"></app-child-component>

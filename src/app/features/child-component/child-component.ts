@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, input, Input, output, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child-component',
@@ -8,19 +8,32 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ChildComponent
 {
-  @Input()
-  childCounter: number = 0
+  //No Signal
+  // @Input()
+  // childCounter: number = 0
 
-  @Output()
-  counterEvent: EventEmitter<number> = new EventEmitter<number>()
+  // @Output()
+  // counterEvent: EventEmitter<number> = new EventEmitter<number>()
 
-  add(): void
-  {
-    this.counterEvent.emit(this.childCounter++)
+  // add(): void
+  // {
+  //   this.counterEvent.emit(this.childCounter++)
+  // }
+
+  // sub(): void
+  // {
+  //   this.counterEvent.emit(this.childCounter--)
+  // }
+
+  //Signal
+  childCounterSignal = input<number>(0)
+  childChangeSignal = output<number>()
+
+  addSignal(){
+    this.childChangeSignal.emit(this.childCounterSignal() + 1)
   }
 
-  sub(): void
-  {
-    this.counterEvent.emit(this.childCounter--)
+  subSignal(){
+    this.childChangeSignal.emit(this.childCounterSignal() - 1)
   }
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { DataService } from './../../services/DataService/data-service';
+import { Component, inject } from '@angular/core';
 
 @Component({
   selector: 'app-base-component',
@@ -7,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrl: './base-component.css',
 })
 export class BaseComponent {
-
 }

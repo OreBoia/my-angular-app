@@ -9,6 +9,7 @@ import { FatherComponent } from './features/father-component/father-component';
 import { ChildComponent } from './features/child-component/child-component';
 import { SignalExampleComponent } from './features/signal-example-component/signal-example-component';
 import { SignalFormComponent } from './features/signal-form-component/signal-form-component';
+import { ItemListComponent } from './features/item-list-component/item-list-component';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ import { SignalFormComponent } from './features/signal-form-component/signal-for
             FatherComponent,
             ChildComponent,
             SignalExampleComponent,
-            SignalFormComponent],
+            SignalFormComponent,
+            ItemListComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
